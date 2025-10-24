@@ -10,7 +10,7 @@ import Lhome from './home.jsx';
 
 const route = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/journal">
             <Routes>
                 <Route path="/" element={<Lhome />} />
                 <Route path="/home" element={<Home />} />
