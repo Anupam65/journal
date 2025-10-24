@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: write  
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -24,15 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./frontend
 
       - name: Run tests
         run: npm test --if-present
-        working-directory: ./frontend
 
       - name: Build the project
         run: npm run build
-        working-directory: ./frontend
 
       # Configure Git identity
       - name: Configure Git
@@ -47,4 +44,3 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           npm run deploy
-        working-directory: ./frontend
