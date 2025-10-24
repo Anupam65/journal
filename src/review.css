@@ -1,0 +1,245 @@
+html,
+body {
+    height: 101%;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #ededed;
+
+}
+
+.disp {
+    color: #0d0d0e;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* Make inputs, textareas, selects and radios appear with white backgrounds inside the form */
+.review-form-container input,
+.review-form-container textarea,
+.review-form-container select {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #111827;
+}
+
+/* Custom white radio (keeps Indigo checked indicator) */
+.review-form-container input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.review-form-container input[type="radio"]::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    /* Indigo indicator */
+    transform: scale(0);
+    transition: transform 0.12s ease;
+}
+
+.review-form-container input[type="radio"]:checked::after {
+    transform: scale(1);
+}
+
+.review-form-container {
+    width: 90%;
+    background-color: #fff;
+    padding: 80px;
+    padding-right: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.form-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4f46e5;
+    /* Indigo-700 */
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #6b7280;
+    /* Gray-500 */
+    margin-bottom: 1rem;
+}
+
+.manuscript-info {
+    padding: 1rem;
+    background-color: #eef2ff;
+    /* Indigo-50 */
+    border-left: 4px solid #4f46e5;
+    /* Indigo-500 */
+    border-radius: 0.5rem;
+}
+
+.manuscript-info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    /* Gray-900 */
+}
+
+.manuscript-info p {
+    font-size: 0.875rem;
+    color: #4f46e5;
+    /* Indigo-600 */
+    margin-top: 0.25rem;
+}
+
+/* Status Message */
+.status-message {
+    background-color: #d1fae5;
+    /* Green-100 */
+    border: 1px solid #10b981;
+    /* Green-400 */
+    color: #065f46;
+    /* Green-700 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-message p {
+    margin: 0.25rem 0;
+}
+
+/* Form Sections */
+.review-form section {
+    margin-bottom: 2rem;
+}
+
+/* Section Titles */
+.review-form h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #3730a3;
+    /* Indigo-800 */
+}
+
+/* Rating Rows */
+.rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    /* Gray-100 */
+}
+
+.rating-row:last-child {
+    border-bottom: none;
+}
+
+.criteria-label {
+    flex: 1 1 200px;
+    font-weight: 500;
+    color: #374151;
+    /* Gray-700 */
+    margin-bottom: 0.25rem;
+}
+
+.rating-options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex: 2 1 auto;
+}
+
+.rating-option {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Inputs */
+input[type="radio"] {
+    accent-color: #4f46e5;
+    /* Indigo-600 */
+    cursor: pointer;
+}
+
+/* Textareas and Select */
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    /* Gray-300 */
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    resize: none;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus,
+select:focus {
+    border-color: #4f46e5;
+    /* Indigo-500 */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Comment Fields */
+.comment-field {
+    margin-bottom: 1.5rem;
+}
+
+.comment-field label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    /* Gray-700 */
+    margin-bottom: 0.25rem;
+}
+
+/* Final Recommendation */
+.final-recommendation select {
+    appearance: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #e5e7eb;
+    /* Gray-200 */
+    padding-top: 1rem;
+}
+
+.submit-button-wrapper button {
+    background-color: #4f46e5;
+    /* Indigo-600 */
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.submit-button-wrapper button:hover {
+    background-color: #4338ca;
+    /* Indigo-700 */
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}

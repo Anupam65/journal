@@ -26,9 +26,9 @@ const Login = ({ onLoginSuccess }) => {
       if (response.data === "Login successful") {
         alert("✅ Login successful");
         if (onLoginSuccess) {
-          onLoginSuccess(); // Optional callback
+          onLoginSuccess();
         }
-        navigate("/"); // Navigate to Home.jsx
+        navigate("/home");
       } else {
         alert("❌ Invalid credentials");
       }

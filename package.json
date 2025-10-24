@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Anupam65/project.git/",
+  "homepage": "https://Anupam65.github.io/project/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
