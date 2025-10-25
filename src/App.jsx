@@ -39,8 +39,8 @@ function App() {
             Journex provides a seamless platform to manage, publish, and explore academic research.
           </p>
           <div className="hero-actions">
-            <a href="/journals" className="cta-button primary-cta">Browse Journals</a>
-            <a href="#" className="cta-button secondary-cta">Browse Reviews</a>
+            <Link to="/journals"><a href="" className="cta-button primary-cta">Browse Journals</a></Link>
+            <Link to="/reviewlist"><a href="" className="cta-button secondary-cta">Browse Reviews</a></Link>
           </div>
         </div>
       </section>
