@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './journals.css';
+import { Link } from 'react-router-dom';
 
 const JournalListVieww = () => {
     const [journals, setJournals] = useState([]);
@@ -55,13 +56,13 @@ const JournalListVieww = () => {
                         <h1 className="brand-name">Journex</h1>
                     </div>
                     <div className="nav-links">
-                        <a href="/home" className="nav-link">Home</a>
-                        <a href="/form" className="nav-link">Submit Paper</a>
-                        <a href="/journals" className="nav-link">Journals</a>
-                        <a href="/reviewlist" className="nav-link">Reviews</a>
-                        <a href="/">
+                        <Link to="/home" className="nav-link">Home </Link>
+                        <Link to="/form" className="nav-link">Submit Paper</Link>
+                        <Link to="/journals"><a href="" className="nav-link">Journals</a></Link>
+                        <Link to="/reviewlist" className="nav-link">Reviews</Link>
+                        <Link to="/">
                             <button className="login-btn">Logout</button>
-                        </a>
+                        </Link>
                     </div>
                     <button className="mobile-menu-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" className="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
