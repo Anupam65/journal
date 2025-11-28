@@ -11,7 +11,7 @@ import toUpperCase from 'lodash/toUpper';
 
 const getRatingColor = (rating) => {
     if (rating >= 4) return '#86fdc0ff'; // green bg
-    if (rating == 3) return '#fdeca7ff'; 
+    if (rating == 3) return '#fdeca7ff';
     return '#fdacacff'; // red bg
 };
 
@@ -29,7 +29,7 @@ function App() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:9909/reviews')
+        axios.get('http://localhost:8808/reviews')
             .then(res => setReviews(res.data))
             .catch(err => console.error(err));
     }, []);
